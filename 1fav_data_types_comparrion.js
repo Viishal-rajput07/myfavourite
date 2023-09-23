@@ -11,7 +11,7 @@
 
 // HERE STRING 2 IS CONVERTED INTO NUMBER AND THEN COMPARED
 // console.log("2" >2)
-// console.log("2" <2)
+// console.log("2" <2)   
 // console.log("2" == 2)
 // console.log("2" === 2)
 

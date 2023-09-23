@@ -3,13 +3,13 @@ const arr1 = [1,2,34,5,78,9]
 // console.log(arr1.slice(1,4))   //give a new array but not change the original array
 // console.log(arr1) 
 
-// console.log(arr1.splice(1,4))   //remove array items but change the original array and return the ramaining array items
+// console.log(arr1.splice(1,4))   //remove array items and change the original array and return the ramaining array items
 // console.log(arr1) 
 
 let mc = ["Thor", "Ironman", "Thanos"]
 let dc = ["Batman", "Superman", "flash"]
 
-// here we should not use push method to join two array because it insert a array inside array
+// We should not use push method to join two array because it insert a array inside array
 
 // we can use here concat method
 // console.log(mc.concat(dc))

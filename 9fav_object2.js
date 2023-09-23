@@ -36,5 +36,13 @@ const obj4 = [
 
 console.log(obj4[0].age)
 
+// DESTRUCTURING OF OBJECTS IN JS
 
+const obj5 = {
+    name: 'Ram',
+    age: 1.5
+}
 
+const {age} = obj5;                             // destructuring of age from obj5
+const {age: a, name:n} = obj5;                  // we can give our own name
+console.log(a, n)

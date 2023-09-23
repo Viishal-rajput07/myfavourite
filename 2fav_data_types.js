@@ -17,7 +17,7 @@ let undef ;                      // 7. undefined
 let obj = {
     name: "Vuhsl",
     age: 35
-}
+} 
 
 // 2. array
 let arr = [1, 2, "hello"]
@@ -39,5 +39,5 @@ console.log(typeof obj)      // object
 console.log(typeof arr)      // object
 console.log(typeof hello)    // it will give 'function' but it suppose to be 'object function'
  
-//  ALL PRIMTIVES DATA TYPES ARE STORED IN STACK MEMORY AND ARE IMMUTABLE(DO NOT CHANGE ORGINAL RAFRENCE)
+// ALL PRIMTIVES DATA TYPES ARE STORED IN STACK MEMORY AND ARE IMMUTABLE (DO NOT CHANGE ORGINAL RAFRENCE)
 // WHILE NON-PRIMITES ARE STORED IN HEAP MEMORY AND ARE MUTABLE(CHANGE ORIGINAL REFRENCE)
