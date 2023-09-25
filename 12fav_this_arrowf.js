@@ -1,6 +1,6 @@
 /***      THIS KEYWORD AND ARROW FUNCTION        ***/
 
-/* Indside a object we used function in order to access to the value obj this keyword is used */
+/* Inside a object we used function in order to access to the value obj this keyword is used */
 const obj = {
     name: 'ram',
     welcome: function () {

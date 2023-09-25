@@ -1,8 +1,8 @@
 const num1 = 399
-console.log(num1)
+// console.log(num1)
 
 const num2 = new Number(150)
-console.log(num2);
+// console.log(num2);
 
 console.log(num2.toString().length)
 console.log(num2.toFixed(2))

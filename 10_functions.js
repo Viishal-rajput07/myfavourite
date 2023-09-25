@@ -1,7 +1,7 @@
-/******  FUNCITONS IN JS WITH OBJECTS AND ARRAY  *******/
+/******  FUNCTiONS IN JS WITH OBJECTS AND ARRAY  *******/
 
 /** Usually this is type of function are used when we don't know how many argument could come  **/
-function calculateCart(...num1){              /* Here ..num1 is called rest operatot */
+function calculateCart(...num1){              /* Here ..num1 is called rest operator */
     return num1
 }
 

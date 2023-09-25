@@ -10,7 +10,7 @@ obj.age = 17
 // console.log(Object.keys(obj))                  // Returns an array of key of properties of an object
 // console.log(Object.values(obj))                // Returns an array of values of properties of an object
 // console.log(Object.entries(obj))               // Returns an array of key/values of properties of an object
-// console.log(obj.hasOwnProperty('age'))         // Determines whether an object has property with name.
+// console.log(obj.hasOwnProperty('age'))         // Determines whether an object has property with age.
 
 // Now to add objects
 let obj1 = {a: 1, b: 2}
