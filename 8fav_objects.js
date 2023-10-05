@@ -24,12 +24,12 @@ let obj = {
 // obj.age = 9
 // console.log(obj)                   // here age will not change because object.freeze is used
 
-obj.greetings = function(){           // adding a function to object
+obj.greetings = function () {           // adding a function to object
     console.log('hello')
 }
 
-obj.greet = function(){               // adding a function and using this to access the name key from oobject
-    console.log(`hello, ${this.name}`)  
+obj.greet = function () {               // adding a function and using this to access the name key from oobject
+    console.log(`hello, ${this.name}`)
 }
 console.log(obj.greet())
 

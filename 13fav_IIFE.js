@@ -5,17 +5,16 @@
 let a = 5;
 
 (function chai() {
-    console.log('chai aur code', a)
+  console.log("chai aur code", a);
 })();
 
-
-( () => {
-    console.log('code and chai')
+(() => {
+  console.log("code and chai");
 })();
 
-( (name) => {
-    console.log('chai aur code with', name)
-})('ram')
+((name) => {
+  console.log("chai aur code with", name);
+})("ram");
 
 /*
 NOTES:
