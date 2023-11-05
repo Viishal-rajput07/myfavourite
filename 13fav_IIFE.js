@@ -1,6 +1,6 @@
 /* IIFE :=>  IMMEDIATELY INVOKED FUNCTION EXPRESSIONS ()()*/
 
-/* IIFE funtion are invoked automatically but it does not now when the context is over  */
+/* IIFE funtion are invoked automatically but it does not know when the context is over  */
 /* in that case we need to add semicolon ';' at the end of fucntion  */
 let a = 5;
 
