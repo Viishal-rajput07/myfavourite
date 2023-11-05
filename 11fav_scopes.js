@@ -4,7 +4,7 @@ function one (){
     let firstname = 'Vishal'
     function two() {
         let lastname = ' Rajput'
-        console.log(firstname+ lastname)
+        console.log(firstname + lastname)
     }
     two()
     // console.log(lastname)           
@@ -18,5 +18,3 @@ NOTES:
 2)  BUT WE CAN USE PARENT VARIABLE DECLARED OUT OF BRACES IN CHILD FUNCTION OR VICE VERSA
 3)  ABOVE IN FUNCTION ONE THE "console.log(lastname)" WILL THROW ERROR BECAUSE LASTNAME IS DECALRED IN FUNC TWO
 */
-
-

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit and remove in DOM</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+
+    <script>
+      function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+        document.querySelector(".language").appendChild(li);
+      }
+      addLanguage("python");
+      addLanguage("java");
+
+      function addOptiLanguage(Language) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(Language));
+        document.querySelector(".language").appendChild(li);
+      }
+      addOptiLanguage("golang");
+
+      //Edit
+      const secondLanguage = document.querySelector("li:nth-child(2)");
+      //   secondLanguage.innerHTML = 'ruby on rails'
+
+      const newli = document.createElement("li");
+      newli.textContent = "ruby";
+      secondLanguage.replaceWith(newli);
+
+      //Edit
+      const firstLang = document.querySelector("li:first-child");
+      firstLang.outerHTML = "<li>typescript</li>";
+
+      const lastLang = document.querySelector("li:last-child");
+      lastLang.remove();
+    </script>
+  </body>
+</html>
