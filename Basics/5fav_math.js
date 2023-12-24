@@ -9,7 +9,7 @@ console.log(Math.max(4,3,25,6))  // shows the maximun value of all argument
 console.log(Math.random())       // generates a random number btw 0 and 1
 
 // To generate random number btw 1 to 10
-console.log(Math.floor((Math.random() * 10) + 1))
+console.log(Math.floor((Math.random() * 1) + 1))
 
 
 // TASK TO GENERATE A RANDOM NUMBER BETWEEN 1 TO 100
