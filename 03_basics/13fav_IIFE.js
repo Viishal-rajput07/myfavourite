@@ -1,7 +1,7 @@
 /* IIFE :=>  IMMEDIATELY INVOKED FUNCTION EXPRESSIONS ()()*/
 
 /* IIFE funtion are invoked automatically but it does not know when the context is over  */
-/* in that case we need to add semicolon ';' at the end of fucntion  */
+/* in that case we need to add semicolon ';' at the end of function  */
 let a = 5;
 
 (function chai() {

@@ -1,7 +1,7 @@
-/******  FUNCTiONS IN JS WITH OBJECTS AND ARRAY  *******/
+/******  FUNCTIONS IN JS WITH OBJECTS AND ARRAY  *******/
 
 /** Usually this is type of function are used when we don't know how many argument could come  **/
-function calculateCart(...num1){              /* Here ..num1 is called rest operator */
+function calculateCart(...num1){              /* Here ...num1 is called rest operator */
     return num1
 }
 
@@ -37,5 +37,5 @@ function handleArray(getArray){
 // handleArray(arr)
 
 /* another way to give array as argument */
-handleArray([9,8,7,6,5])
+// handleArray([9,8,7,6,5])
 

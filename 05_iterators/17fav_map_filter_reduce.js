@@ -1,8 +1,8 @@
 /**** Map, Filter and reduce ****/
 
-/***** Reduce *****/
-/* Returns the elements of an array that meet the condition specified in a callback function*/
 
+/****  Filter  *******/
+/* Returns the elements of an array that meet the condition specified in a callback function */
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const greater_5 = nums.filter((num) => num > 5);
@@ -30,32 +30,36 @@ const bookFilter = books.filter((bk) => {
 
 // console.log(bookFilter)
 
-/*******   Map  *********/
+
+/*******  Map  *********/
 /* Calls a defined callback function on each element of an array, and returns an array that contains the results. */
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // const newNums = myNumbers.map( (num) => {return num + 10})
 
+
+/***  Chaining  ***/
 const newNums = myNumbers
-  .map((num) => num * 10)
-  .map((num) => num + 1)
-  .filter((num) => num > 50);
+                      .map((num) => num * 10)
+                      .map((num) => num + 1)
+                      .filter((num) => num > 50);
 
 // console.log(newNums)
 
-/********** Reduce **********/
-/*Calls the specified callback function for all the elements in an array. 
+
+/**********  Reduce  **********/
+/* Calls the specified callback function for all the elements in an array. 
 The return value of the callback function is the accumulated result, 
-and is provided as an argument in the next call to the callback function. */
+and is provided as an argument in the next call to the callback function */
 
 const myNums = [1, 2, 3, 4, 5, 6];
 const myTotal = myNums.reduce(function (acc, currval) {
-  console.log(`acc: ${acc} and currval: ${currval}`);
+  // console.log(`acc: ${acc} and currval: ${currval}`);
   return acc + currval;
 }, 0);
 
-console.log(myTotal);
+// console.log(myTotal);
 
 const shoppingCart = [
   {
@@ -78,4 +82,22 @@ const shoppingCart = [
 
 const PricePay = shoppingCart.reduce((acc, item) => acc + item.price, 0);
 
-console.log(PricePay);
+// console.log(PricePay);
+
+// for(let i = 0; i< length; i++){
+
+// }
+
+
+/***  Fibonacci Series  ***/
+let len = 10
+
+let arr = [0,1]
+// arr.push(0)
+// arr.push(1)
+
+for(let i = 2; i<len; i++){
+  arr[i] = arr[i - 1] + arr[i - 2];
+}
+
+console.log(arr);
