@@ -1,14 +1,14 @@
 // OBJECT IN JS
 
 //INTERVIEW Q => use a symbol variable as key in objects
-let sym = Symbol('123')
+let sym = Symbol("123");
 
 let obj = {
-    name: 'visahal',
-    age: 20,
-    'aao guru': 'hmm',
-    [sym]: 'symbol'
-}
+  name: "visahal",
+  age: 20,
+  "aao guru": "hmm",
+  [sym]: "symbol",
+};
 
 // obj.email = 'text@gamil.com'
 // console.log(obj.name)              // this is used to access object but in some exception cases sqr bracket used
@@ -24,13 +24,13 @@ let obj = {
 // obj.age = 9
 // console.log(obj)                   // here age will not change because object.freeze is used
 
-obj.greetings = function () {           // adding a function to object
-    console.log('hello')
-}
+obj.greetings = function () {
+  // adding a function to object
+  console.log("hello");
+};
 
-obj.greet = function () {               // adding a function and using this to access the name key from oobject
-    console.log(`hello, ${this.name}`)
-}
-console.log(obj.greet())
-
-
+obj.greet = function () {
+  // adding a function and using this to access the name key from oobject
+  console.log(`hello, ${this.name}`);
+};
+console.log(obj.greet());

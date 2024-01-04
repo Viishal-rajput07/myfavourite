@@ -40,7 +40,7 @@ let val1;
 // val1 = null ?? 10                         /* 10*/
 // val1 = undefined ?? 11                    /* 11*/
 // val1 = undefined ?? 10 ?? 11              /* 10 */
-val1 = null ?? false ?? undefined;           /* false */
+val1 = null ?? false ?? undefined; /* false */
 
 // console.log(val1)
 

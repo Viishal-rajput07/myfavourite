@@ -1,6 +1,5 @@
 /**** Map, Filter and reduce ****/
 
-
 /****  Filter  *******/
 /* Returns the elements of an array that meet the condition specified in a callback function */
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -20,9 +19,11 @@ const books = [
   { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
 ];
 
-// const bookFilter = books.filter( (bk)=>{
-//  return bk.genre === 'Non-Fiction'
-// })
+const bookBhandar = books.filter((bk) => {
+  return bk.genre === "Non-Fiction";
+});
+
+// console.table(bookBhandar)
 
 const bookFilter = books.filter((bk) => {
   return bk.publish >= 1995 && bk.genre === "History";
@@ -30,23 +31,23 @@ const bookFilter = books.filter((bk) => {
 
 // console.log(bookFilter)
 
-
 /*******  Map  *********/
 /* Calls a defined callback function on each element of an array, and returns an array that contains the results. */
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// const newNums = myNumbers.map( (num) => {return num + 10})
-
+const newNumber = myNumbers.map((num) => {
+  return num * 10;
+});
+// console.log(newNumber)
 
 /***  Chaining  ***/
 const newNums = myNumbers
-                      .map((num) => num * 10)
-                      .map((num) => num + 1)
-                      .filter((num) => num > 50);
+  .map((num) => num * 10)
+  .map((num) => num + 1)
+  .filter((num) => num > 50);
 
 // console.log(newNums)
-
 
 /**********  Reduce  **********/
 /* Calls the specified callback function for all the elements in an array. 
@@ -84,19 +85,15 @@ const PricePay = shoppingCart.reduce((acc, item) => acc + item.price, 0);
 
 // console.log(PricePay);
 
-// for(let i = 0; i< length; i++){
-
-// }
-
 
 /***  Fibonacci Series  ***/
-let len = 10
+let len = 10;
 
-let arr = [0,1]
+let arr = [0, 1];
 // arr.push(0)
 // arr.push(1)
 
-for(let i = 2; i<len; i++){
+for (let i = 2; i < len; i++) {
   arr[i] = arr[i - 1] + arr[i - 2];
 }
 

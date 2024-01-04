@@ -1,16 +1,16 @@
 /*  SCOPES IN JS */
 
-function one (){
-    let firstname = 'Vishal'
-    function two() {
-        let lastname = ' Rajput'
-        console.log(firstname + lastname)
-    }
-    two()
-    // console.log(lastname)           
+function one() {
+  let firstname = "Vishal";
+  function two() {
+    let lastname = " Rajput";
+    console.log(firstname + lastname);
+  }
+  two();
+  // console.log(lastname)
 }
 
-one()
+one();
 
 /* 
 NOTES:

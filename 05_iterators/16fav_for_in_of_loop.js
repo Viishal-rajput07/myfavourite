@@ -3,10 +3,10 @@
 const arr = [1, 2, 3, "hello"];
 
 for (const i of arr) {
-  //   console.log(i);
+  // console.log(i);
 }
 for (const i in arr) {
-  //   console.log(arr[i]);
+  // console.log(arr[i]);
 }
 
 const map = new Map();
@@ -15,7 +15,7 @@ map.set("Sk", "Shaktiman");
 map.set("Hw", "Hello world");
 map.set("C", "Chti@%");
 
-// console.log(map)
+// console.table(map)
 
 for (const [key, value] of map) {
   // console.log(key +  ' :=> ' + value)
@@ -31,10 +31,10 @@ const obj = {
   surname: "namunaUltra",
 };
 
-/* We can iterate object using for of loop */
+/* We can not iterate object using for of loop */
 // for (const [key, value] of obj) {
-// console.log(key +  ' :=> ' + value)
-//  }
+// // console.log(key +  ' :=> ' + value)
+// }
 
 /* To iterate object we need to use for in loop */
 for (const key in obj) {
@@ -50,13 +50,14 @@ lang.forEach(function (val) {
   // console.log(val)
 });
 
-/* looping with foreach and passing a callback arrow function , note: function is without name*/
-lang.forEach((val) => {
+/* looping with foreach and passing a callback arrow function, note: function is without name.Returns undefined*/
+const language = lang.forEach((val) => {
   // console.log(val)
 });
+// console.log(language)
 
 function languages(item) {
-//   console.log(item);
+  // console.log(item);
 }
 
 /* Passing directly the pre written function */
@@ -77,6 +78,6 @@ const myLang = [
   },
 ];
 
-myLang.forEach( (item) =>{
-    console.log(item.langName, item.langFile)
-})
+myLang.forEach((item) => {
+  console.log(item.langName, item.langFile);
+});
