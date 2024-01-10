@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+ 
+<script>
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log('clicked on images')
+    }, false)
+
+    // document.getElementById('photoshop').addEventListener('click', function(e){
+    //     console.log('clicked on photoshop image')
+    //     e.stopPropagation()
+    // }, false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log('clicked on google link')
+        e.preventDefault()
+        e.stopPropagation()
+
+    }, false)
+</script>
+</html>
+
+<!-- 
+1. Addeventlistener syntax = document.addEventListener(event, function, Capture)
+here capture is called eventpropagation and by default is false
+a) false:-  bubbling phase means start from button to top. 
+b) true:-  capturing phase means start from top to button.
+2. stopPropagation => prevents further propagation of the current event in the capturing and bubbling phases.
+3. preventdefault => The preventDefault() method of the Event interface tells the user agent that if the event
+                     does not get explicitly handled, its default action should not be taken as it normally would be.
+
+ -->

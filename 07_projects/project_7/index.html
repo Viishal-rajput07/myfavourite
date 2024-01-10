@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frequently color changing</title>
+</head>
+<style>
+    #start{
+        background-color: rgb(46, 247, 10);
+    }
+    #stop{
+        background-color: rgb(243, 14, 14);
+    }
+</style>
+<body>
+    <div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    
+</body>
+
+<script>
+
+    
+    let startStop;
+    
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+
+    // generates a random color on hex value
+    const randomColor = function (){
+
+    // hex color have this characters including '#'
+    let hex = '0123456789abcdef'
+    let color = '#'
+
+    for(let i=0; i<6; i++){
+
+        //  generate random no. from 1 to 16 and add to color variable
+        let num = Math.floor(Math.random() * 16) 
+        color += hex[num]
+    }
+    // console.log(color)
+    return color
+}
+
+    // on click of start we generate a bg-color using randomColor function
+    start.addEventListener('click', function (e) {
+        if(!intervalId){
+            intervalId = setInterval(changeBgColor, 1000)
+        }
+        function changeBgColor() {
+        document.body.style.backgroundColor = randomColor()
+        }
+    })
+
+    stop.addEventListener('click', function (e) {
+        clearInterval(intervalId)
+        intervalId = null
+    })
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<body>
+    <div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    <h2></h2>
+    <h3></h3>
+</body>
+
+<script>
+
+    // We intialize varible startStop to work on our setinterval
+    let startStop;
+    let count = 0
+    let h2 = document.querySelector('h2')
+    let h3 = document.querySelector('h3')
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+
+    start.addEventListener('click', function (e) {
+        let starter = function () {
+            // we don't want to see stopped when we click on the start
+            h3.innerHTML = ``
+
+            // increment the count on each second after click on start
+            count++
+            h2.innerHTML = `Started ${count}`
+        }
+        startStop = setInterval(starter, 1000)
+    })
+
+    stop.addEventListener('click', function (e) {
+
+        //  it will stop the interval when the user clicks on stop
+        clearInterval(startStop)
+
+        // then we show stopped message so that the user can see the message
+        h3.innerHTML = `stopped`
+    })
+</script>
+
+</html>
