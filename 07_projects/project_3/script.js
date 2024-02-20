@@ -1,6 +1,6 @@
 const form = document.querySelector("form")
 
-// this will empty usecase
+// this will give empty usecase
 // const height = parseInt(document.querySelector('#height'))
 
 form.addEventListener('submit', function (e) {

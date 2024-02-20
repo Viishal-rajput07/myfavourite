@@ -30,7 +30,7 @@ obj.greetings = function () {
 };
 
 obj.greet = function () {
-  // adding a function and using this to access the name key from oobject
+  // adding a function and using this to access the name key from object
   console.log(`hello, ${this.name}`);
 };
-console.log(obj.greet());
+obj.greet();

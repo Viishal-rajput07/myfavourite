@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 470px;
+            background: linear-gradient(135deg, #00feba, #5b548a);
+            color: #fff;
+            /* height: 500px; */
+            border-radius: 30px;
+            padding: 40px 35px;
+            margin: 100px auto 0;
+        }
+
+        .search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inputbar {
+            border: 0;
+            outline: 0;
+            margin-top: 20px;
+            height: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 50%;
+            font-size: 22px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 0;
+            /* outline: 0; */
+            cursor: pointer;
+            margin-left: 10px;
+
+        }
+
+        .btn img {
+            width: 15px
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: space-around; */
+        }
+
+        .section img {
+            width: 170px;
+            margin-bottom: -29px;
+            margin-top: 20px;
+        }
+
+        .temp {
+            font-size: 60px;
+
+        }
+
+        .city {
+            font-size: 40px;
+            margin-top: -29px;
+            font-weight: 500;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left,
+        .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .left img,
+        .right img {
+            width: 40px;
+            margin-right: 8px;
+        }
+
+        .humidity {
+            font-size: 30px;
+            margin-bottom: -12px;
+        }
+
+        .wind {
+            font-size: 25px;
+            margin-bottom: -12px;
+        }
+
+        .hide {
+            display: hidden;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        .error {
+            display: none;
+        }
+
+        .error p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="search">
+            <input class="inputbar" spellcheck="false" type="text" placeholder="Enter city name">
+            <button class="btn"><img src="./images/search.png"></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+        <div class="wrapper">
+            <div class="section">
+                <img class="weathericon" src="./images/clouds.png" alt="">
+                <h1 class="temp">22°C</h1>
+                <h2 class="city">New Delhi</h2>
+            </div>
+
+            <div class="footer">
+                <div class="left">
+                    <div>
+                        <img src="./images/humidity.png" alt="">
+                    </div>
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <img src="./images/wind.png" alt="">
+                    </div>
+                    <div>
+                        <p class="wind">20KM/H</p>
+                        <p>Air</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    const apiKey = 'add3f83ed0081eab295333b8b7fc1d49'
+    const input = document.querySelector('.inputbar')
+    const button = document.querySelector('.btn')
+    let weatherIcon = document.querySelector('.weathericon')
+
+
+    async function checkWeather(city) {
+
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+        
+        if (response.status == 404) {
+            document.querySelector('.error').style.display = 'block'
+            document.querySelector('.wrapper').style.display = 'none'
+
+        }
+        
+        else{
+            const data = await response.json()
+            console.log(data)
+
+            console.log('hii')
+            document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°C'
+            document.querySelector('.city').innerHTML = data.name
+
+            document.querySelector('.humidity').innerHTML = data.main.humidity + '%'
+            document.querySelector('.wind').innerHTML = data.wind.speed + 'KM/H'
+
+            if (data.weather[0].main == 'Clouds') {
+                weatherIcon.src = './images/clouds.png'
+            }
+            else if (data.weather[0].main == 'Rain') {
+                weatherIcon.src = './images/rain.png'
+            }
+            else if (data.weather[0].main == 'Clear') {
+                weatherIcon.src = './images/clear.png'
+            }
+            else if (data.weather[0].main == 'Haze' || data.weather[0].main == 'Drizzle') {
+                weatherIcon.src = './images/drizzle.png'
+            }
+            else if (data.weather[0].main == 'Mist') {
+                weatherIcon.src = './images/mist.png'
+            }
+
+            document.querySelector('.wrapper').style.display = 'block'
+            document.querySelector('.error').style.display = 'none'
+
+
+        }}
+
+
+
+        button.addEventListener('click', function () {
+
+            checkWeather(input.value)
+        })
+    
+
+
+
+</script>
+
+</html>
+
