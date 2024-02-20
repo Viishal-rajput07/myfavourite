@@ -2,7 +2,7 @@
 
 let str = 'Hello my name is vishal rajput'
 
-// console.log(str.length)                              // Gives the length 
+// console.log(str.length)                             // Gives the length 
 // console.log(str.charAt(6))                          // Returns the character at the specified index
 // console.log(str.indexOf('a'))                       // Give the start index of a character
 // console.log(str.lastIndexOf('a'))                   // Give the last index of a character

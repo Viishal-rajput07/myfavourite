@@ -43,6 +43,6 @@ const obj5 = {
   age: 1.5,
 };
 
-const { age } = obj5; // destructuring of age from obj5
-const { age: a, name: n } = obj5; // we can give our own name
+const { age } = obj5;               // destructuring of age from obj5
+const { age: a, name: n } = obj5;   // we can give our own name
 console.log(a, n);

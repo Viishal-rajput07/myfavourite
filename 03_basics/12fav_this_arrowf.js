@@ -3,15 +3,15 @@
 /* Inside a object we used function in order to access to the value obj this keyword is used */
 const obj = {
   name: "ram",
-  welcome: function () {
+  welcome:  function() {
     console.log(`hello ${this.name}`);
     console.log(
       this
     ); /* this will refrence to the context which is object here*/
   },
 };
-// console.log(this)                                  /*  The global object of this is window and type is object*/
-// obj.welcome()
+// console.log(this)             /*  The global object of this is window and type is object*/
+obj.welcome()
 // obj.name = 'shyam'
 // obj.welcome()
 

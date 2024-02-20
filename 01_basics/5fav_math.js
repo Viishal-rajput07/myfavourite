@@ -12,7 +12,7 @@ console.log(Math.random())       // generates a random number btw 0 and 1
 console.log(Math.floor((Math.random() * 10) + 1))
 
 
-// TASK TO GENERATE A RANDOM NUMBER BETWEEN 1 TO 100
+// TASK TO GENERATE A RANDOM NUMBER BETWEEN 10 TO 100
 const min = 10
 const max = 100
 console.log(Math.floor((Math.random() * (max-min+1)) + min))
